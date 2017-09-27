@@ -91,11 +91,15 @@ public:
     int setFadeInOutEnabled(bool enabled) noexcept;
 
     bool isPollingRequired() const noexcept;
+    bool isPollSkipping() const noexcept;
+    void stopPollSkipping() noexcept;
+    void startPollSkipping() noexcept;
     void poll() noexcept;
 
 private:
     class Impl;
     std::unique_ptr<Impl> impl_;
+    bool poll_skipping;
 };
 
 } // namespace impl

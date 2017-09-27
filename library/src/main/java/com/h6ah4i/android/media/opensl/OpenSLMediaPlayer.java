@@ -47,7 +47,8 @@ public class OpenSLMediaPlayer implements IBasicMediaPlayer {
     private static final boolean LOCAL_LOGD = false;
 
     // options
-    public static final int OPTION_USE_FADE = (1 << 0);
+    public static final int OPTION_USE_FADE = 1;
+    public static final int OPTION_NO_FADE = 0;
 
     // fields
     private static final String[] PROJECTION_MEDIACOLUMNS_DATA = new String[] {

@@ -13,8 +13,21 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    }
+}
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.martppa'
+version = '1.0'
 
 ext {
     projectBasePath = file('.').absolutePath
@@ -48,7 +61,8 @@ android {
       Uncomment the following line if you want to enable Native Library debugging.
       (should not use "publishNonDefault true" because it increases build time too long!)
      */
-    // defaultPublishConfig 'debug'
+    defaultPublishConfig 'debug'
+    publishNonDefault true
 
     if (useOfficialExternalNativeBuild) {
         externalNativeBuild {
