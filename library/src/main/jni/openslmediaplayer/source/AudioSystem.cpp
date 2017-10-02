@@ -62,9 +62,7 @@
 #define DEBUG_PROFILE_POLLING_GET_TIMESTAMP(ts)                                                                        \
     DEBUG_PROFILE_POLLING_PROCESS(utils::timespec_utils::get_current_time(ts))
 
-#define POLLS_TO_SKIP 5
-#define MAX_VOL 100
-#define MIN_VOL 0
+#define POLLS_TO_SKIP 6
 #define MAX_POLLS_TO_SKIP 1000000000
 
 namespace oslmp {

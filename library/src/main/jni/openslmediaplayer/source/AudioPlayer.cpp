@@ -1357,6 +1357,8 @@ namespace oslmp {
                 result = OSLMP_RESULT_SUCCESS;
             } else if (isSeeking()) {
                 // seeking
+                if (!this->fade_in_out_enabled_)
+                    this->setVolume(MIN_VOL, MIN_VOL);
                 *position = preparing_source_->getInitialSeekPosition();
                 result = OSLMP_RESULT_SUCCESS;
             } else if (seek_pending_) {

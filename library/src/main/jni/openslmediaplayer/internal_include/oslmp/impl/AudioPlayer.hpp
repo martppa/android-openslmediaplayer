@@ -17,6 +17,9 @@
 #ifndef AUDIO_PLAYER_HPP_
 #define AUDIO_PLAYER_HPP_
 
+#define MAX_VOL 100
+#define MIN_VOL 0
+
 #include <cxxporthelper/memory>
 #include <SLES/OpenSLES.h>
 
